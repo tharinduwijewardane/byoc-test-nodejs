@@ -2,13 +2,12 @@ const express = require('express');
 const app = express();
 const port = 9090;
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
 
-  await setTimeout(2000);
-
-  res.send('Hello World!');
+    console.log("request received");
+    res.send('Hello World!');
 });
 
 app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+    console.log(`App listening on port ${port}`);
 });
